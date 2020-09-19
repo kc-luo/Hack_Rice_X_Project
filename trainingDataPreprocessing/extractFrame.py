@@ -1,19 +1,20 @@
 import cv2 as cv
 import os
 
-def capture(file):
+
+i = 1
+def capture(file, interval=900):
     cap = cv.VideoCapture(file)
-    i = 1
+    length = int(cap.get(cv.CAP_PROP_FRAME_COUNT))
+    global i
     j = 0
 
-    interval = 900
-
-    while (cap.isOpened()):
+    while (cap.isOpened() and j < length):
         cap.set(1, j)
         ret, frame = cap.read()
         if ret == False:
             break
-        cv.imwrite("img/" + "{:04d}".format(i) + ".jpg", frame)
+        cv.imwrite("./trainingDataPreprocessing/img_y/" + "{:04d}".format(i) + ".png", frame)
         i += 1
         j += interval
 
@@ -21,6 +22,6 @@ def capture(file):
     cv.destroyAllWindows()
 
 
-for dirpath, dirnames, files in os.walk('vid', topdown=False):
+for dirpath, dirnames, files in os.walk('./trainingDataPreprocessing/vid', topdown=False):
     for file_name in files:
-        capture("vid/"+file_name)
+        capture("./trainingDataPreprocessing/vid/" + file_name)
