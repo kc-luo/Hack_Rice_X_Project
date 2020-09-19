@@ -3,7 +3,7 @@ import os
 
 
 i = 1
-def capture(file, interval=900):
+def capture(file, interval=450):
     cap = cv.VideoCapture(file)
     length = int(cap.get(cv.CAP_PROP_FRAME_COUNT))
     global i

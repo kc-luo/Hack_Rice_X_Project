@@ -13,9 +13,9 @@ def shrink(file):
     file_id = file_id[:len(file_id) - 4]
     # print(file_id)
     half = cv.resize(img, dim, interpolation=cv.INTER_CUBIC)
-    cv.imwrite("./trainingDataPreprocessing/img_x/" + file_id + "x2.png", half)
+    cv.imwrite("./trainingDataPreprocessing/validation_x/" + file_id + "x2.png", half)
 
 
-for dirpath, dirnames, files in os.walk('./trainingDataPreprocessing/img_y', topdown=False):
+for dirpath, dirnames, files in os.walk('./trainingDataPreprocessing/validation_y', topdown=False):
     for file_name in files:
-        shrink("./trainingDataPreprocessing/img_y/" + file_name)
+        shrink("./trainingDataPreprocessing/validation_y/" + file_name)
