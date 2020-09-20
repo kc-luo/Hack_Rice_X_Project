@@ -1,0 +1,10 @@
+2020-09-20 00:26:42,946 - ISR.predict.predictor - INFO - Creating output directory:
+E:\_Kevin\Code\Hack_Rice_X_Project\application\output\input
+2020-09-20 00:26:42,947 - ISR.predict.predictor - INFO - Loaded weights from 
+ > weights\rdn-C3-D10-G64-G064-x2_epoch140.hdf5
+2020-09-20 00:28:04,555 - ISR.predict.predictor - INFO - Loaded weights from 
+ > weights\rdn-C3-D10-G64-G064-x2_epoch140.hdf5
+2020-09-20 00:29:50,023 - ISR.predict.predictor - INFO - Loaded weights from 
+ > E:\_Kevin\Code\Hack_Rice_X_Project\application\weights\rdn-C3-D10-G64-G064-x2_epoch140.hdf5
+2020-09-20 00:30:14,632 - ISR.predict.predictor - INFO - Loaded weights from 
+ > E:\_Kevin\Code\Hack_Rice_X_Project\application\weights\rdn-C3-D10-G64-G064-x2_epoch140.hdf5
