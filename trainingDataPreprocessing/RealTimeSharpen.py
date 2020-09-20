@@ -5,22 +5,15 @@ import numpy as np
 def sharp(image):
     kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]], np.floqat32)
     dst = cv2.filter2D(image, -1, kernel=kernel)
-    #cv2.imwrite("img\demo.png", dst)
     return (dst)
 
 
-#src = cv2.imread("/Users/jiaqilu/Desktop/321_test.png")
-#sharp(src)
 
 vid = cv2.VideoCapture(0)
 while (True):
 
-    # Capture the video frame
-    # by frame
-    ret, frame = vid.read()
 
-    # Display the resulting frame
-    #cv2.imshow('image',frame)
+    ret, frame = vid.read()
 
     sharpen = sharp(frame)
 
