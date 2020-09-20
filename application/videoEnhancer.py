@@ -48,8 +48,8 @@ class VideoEnhancer:
             frame = self.p.predict(frame)
             # write the flipped frame
             out.write(frame)
-            cv.imshow('frame', frame)
-            if cv.waitKey(1) == ord('q'):
+            cv2.imshow('frame', frame)
+            if cv2.waitKey(1) == ord('q'):
                 break
         cap.release()
         cv2.destroyAllWindows()
