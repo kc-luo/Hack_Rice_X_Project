@@ -1,4 +1,4 @@
-Stimport cv2
+import cv2
 import numpy as np
 from helper import *
 from ISR.predict import Predictor
